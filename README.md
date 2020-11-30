@@ -1,0 +1,1 @@
+# This is a Python/Django backend built for the landingPage of a Mock Interview Website

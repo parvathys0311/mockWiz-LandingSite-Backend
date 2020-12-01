@@ -1,0 +1,168 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-left {
+  padding: 2em;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+}
+
+.container-right {
+  width: 100%;
+  background-color: #4eb8b4;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* style the contents with container-left */
+
+main {
+  padding-top: 5em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main h1 {
+  margin:0;
+}
+
+.tagline {
+  margin: 0;
+  padding-top: 1em;
+
+  color: #4eb8b4;
+
+}
+
+form ul {
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+input, select, option {
+  padding: 0.4em 0;
+
+  border:0;
+  border-bottom: 0.5px solid #d2d2d2;
+
+  font-family:inherit;
+  font-size: 1em;
+
+  width: 100%;
+  background-color: transparent;
+}
+
+input:focus, select:focus{
+  outline: none;
+}
+
+.selectEx {
+  color: #d2d2d2;
+}
+
+option:not(first-child) {color:#d2d2d2}
+
+textarea {
+  resize: vertical;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #d2d2d2;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #d2d2d2;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #d2d2d2;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #d2d2d2;
+}
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+
+    background: url(../images/chevron-down-solid.svg) no-repeat;
+    background-position: right center;
+    background-size: 10px;
+}
+
+
+button { 
+  -webkit-appearance: none;
+  text-align: center;
+  color: white;
+  background-color: #4d2003;
+  /* box-shadow:0 0 15px 4px rgba(0,0,0,0.06); */
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 2rem;
+  margin-top: 1.2rem;
+
+  align-self: center;
+} 
+
+button:hover {
+  background-color: #4d210380;
+}  
+
+
+/* style the contents with container-right */
+.imageStyle {
+  padding: 3em;
+  margin: auto;
+  width: 100%;
+}
+
+.imageStyle img {
+  
+  width: 100%;
+}
+
+.expertForm {
+  margin: 2em 0;
+}
+
+.error {
+    width: 100%;
+    color: red;
+    font-size: 0.9em;
+    margin:0;
+}
+
+/* desktop specific view styles */
+
+@media (orientation: landscape) {
+
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .container-left {
+    width: 55%;
+  }
+
+  .container-right {
+    width: 45%;
+  }
+
+  input, select, option {
+    width: 60%;
+  }
+  
+}

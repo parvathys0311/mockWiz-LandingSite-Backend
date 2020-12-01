@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+    <title>MockWiz</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-left">
+      <header>
+        <div class="logo-item">
+          <a href="index.html"><img class="logo" src="{% static './images/MockWiz-Logo.svg' %}" alt="MockWiz Logo"></a>
+        </div>
+      </header>
+      <main>
+        <h1 class="heading">Got professional interviewing experience?</h1>
+        <p class="tagline">Earn up to $60 per hour by helping others practice for job interviews.</p>
+        <div class="expertForm">
+          <form action="#" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <ul>
+              <li>
+                {{form.firstName}}
+              </li>
+              <li>
+                {{form.email}}
+              </li>
+              <li>
+                  {{form.expertiseFunction}}
+              </li>
+              <li>
+                  {{form.yearsInterviewedFor}}
+              </li>
+              <li>
+                <button type="submit" id="ex-button" name="submit-exp">Request Early Access</button>
+              </li>
+              <li>
+                <p class="font-small">By submitting your information, you agree to our <a href="#">Terms of Use & Privacy Policy.</a>
+                </p>
+              </li>
+            </ul>
+          </form>
+          <p class="error">{{form.email.errors | striptags}}</p>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+            {% endfor %}
+        {% endif %}
+      </main>
+      <footer class="footerStyle">
+        <p class="font-small">©2020-21 MockWiz. All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <div class="container-right">
+      <div class="imageStyle"><img src="{% static './images/MockWiz-Cover.jpg' %}"></div>
+    </div>
+  </div>
+</body>
+<script src="{% static './js/formSelect.js' %}"></script>
+</html>

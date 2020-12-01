@@ -1,0 +1,28 @@
+/* Resets */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  max-height: 100vh;
+}
+
+/* removes defualt bullet-points in lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* removes defualt underline in <a> links */
+a {
+  color: #4d2003;
+  /* text-size-adjust: none; */
+} 
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}

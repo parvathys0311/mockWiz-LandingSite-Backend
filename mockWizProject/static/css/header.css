@@ -1,0 +1,38 @@
+****************
+/* Header */
+/******************/
+
+/* header contains only logo */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+  background-color: rgb(255, 255, 255);
+
+  flex-wrap: wrap;
+}
+/********/
+/* Logo */
+/********/
+
+.logo {
+  width: 120px;
+}
+
+
+/* Screen is in 'portrait' orientation (mobile view) */
+
+
+/* (desktop view is handled in the media query below) */
+/* Screen is in 'landscape' orientation (desktop view) */
+@media (orientation: landscape) {
+  
+  
+}
+
+
+
+
+
+

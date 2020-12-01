@@ -1,0 +1,30 @@
+/******************/
+/* Footer Section */
+/******************/
+
+footer {
+  position: absolute;    
+  bottom: 0;
+  width: 100%; 
+}
+
+footer p {
+  text-align: left;
+  margin: 0;
+  padding: 1em 0;
+}
+
+
+/* Following is for "sticky" footer */
+.container-left {
+  /* Required for flex box to push footer to page bottom */
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (orientation: landscape) {
+
+}
+
+
+

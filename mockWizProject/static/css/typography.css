@@ -9,7 +9,7 @@ body{
   font-family: 'Inter', sans-serif;
     
   /* line-height (called leading in print design); browser default is usually 1.2. Try for a minimum of 1.5, max should be less than 2 */
-  line-height: 1.5;
+  line-height: 1.2;
   color: #222222;
 }
 
@@ -19,10 +19,6 @@ main h1{
 
 main p{
   font-size: 1.3em;
-}
-
-.tagline {
-  font-weight: bold;
 }
 
 .font-small {

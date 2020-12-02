@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -9,15 +9,13 @@ from expertApp.models import Expert
 
 def index(request):
     if request.method == 'POST':
-        print("entered form")
         submittedForm = Expertform(request.POST)
         if submittedForm.is_valid():
-            print("form valid")
             data = submittedForm.cleaned_data
             # save form
             submittedForm.save()
             # display success message for user
-            messages.success(request, 'Expert form is submitted successfully')
+            messages.success(request, 'Thanks for submitting the form. We will be in touch with you shortly.')
 
             createdExpertEmail = submittedForm['email'].value()
             createdExpert = Expert.objects.filter(email=createdExpertEmail)
@@ -26,14 +24,19 @@ def index(request):
             name = createdExpert[0].firstName
             email = createdExpert[0].email
             try:
-                send_mail('Welcome to MockWiz', f'Hi {name}, thanks for registering with us.We will get back to you soon.',
-                          'parvathys0311@gmail.com',
-                          [email], fail_silently=False)
+                email = EmailMessage(
+                    'Welcome to MockWiz',
+                    f'Hi {name},\n\nThanks for your interest in MockWiz. We will contact you soon regarding the next steps.\n\nTo ensure you don’t miss out on any important messages, please add us to your contact list.\n\nRegards,\nMockWiz Team',
+                    'parvathys0311@gmail.com',
+                    [email],
+                    ['parvathys0311@gmail.com']
+                )
+                email.send(fail_silently=False)
+
             except Exception:
                 pass
             return redirect('index')
         else:
-            print("Invalid")
             return render(request, "pages/index.html", {'form': submittedForm})
     else:
         form = Expertform()

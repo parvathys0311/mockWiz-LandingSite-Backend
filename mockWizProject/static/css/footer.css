@@ -6,24 +6,40 @@ footer {
   position: absolute;    
   bottom: 0;
   width: 100%; 
+
+  overflow: hidden;
+  padding-top: 3em;
 }
 
 footer p {
   text-align: left;
   margin: 0;
-  padding: 1em 0;
+  padding-bottom: 1em;
 }
 
-
-/* Following is for "sticky" footer */
-.container-left {
-  /* Required for flex box to push footer to page bottom */
-  min-height: 100vh;
-  position: relative;
-}
 
 @media (orientation: landscape) {
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 
+    overflow: hidden;
+    padding-top: 2em;
+  }
+
+  footer p {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  /* Following is for "sticky" footer */
+
+  /* Required for flex box to push footer to page bottom */
+  .scrollable-content {
+    /* min-height: 100vh; */
+    position: relative;
+  }
 }
 
 

@@ -27,9 +27,9 @@ def index(request):
                 email = EmailMessage(
                     'Welcome to MockWiz',
                     f'Hi {name},\n\nThanks for your interest in MockWiz. We will contact you soon regarding the next steps.\n\nTo ensure you don’t miss out on any important messages, please add us to your contact list.\n\nRegards,\nMockWiz Team',
-                    'parvathys0311@gmail.com',
+                    'hello@mockwiz.com',
                     [email],
-                    ['parvathys0311@gmail.com']
+                    ['hello@mockwiz.com']
                 )
                 email.send(fail_silently=False)
 
@@ -41,3 +41,6 @@ def index(request):
     else:
         form = Expertform()
         return render(request, "pages/index.html",{'form': form})
+
+def tc(request):
+    return render(request, "pages/T&C.html")

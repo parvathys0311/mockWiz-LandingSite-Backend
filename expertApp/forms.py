@@ -21,5 +21,5 @@ class Expertform(ModelForm):
         email = self.cleaned_data['email']
         if (Expert.objects.filter(email=email).exists()):
             # this condition is true while registering a new form record
-            raise forms.ValidationError('Email already exists. Looks like you have made an enquiry already. Our team will get back to you soon.')
+            raise forms.ValidationError('Email already exists. Looks like you have made an inquiry already. We will get back to you soon.')
         return email

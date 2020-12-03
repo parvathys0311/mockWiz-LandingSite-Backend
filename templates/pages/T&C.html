@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/t&c.css">
-  <link rel="stylesheet" href="css/typography.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/header.css">
-  <title>MockWiz</title>
-</head>
+{% load static %}
+
+{% block content %}
 
 <body class="tc-container">
   <header>
     <div class="logo-item">
-      <a href="index.html"><img class="logo" src="./images/MockWiz-Logo (2).svg" alt="MockWiz Logo"></a>
+      <a href="/"><img class="logo" src="{% static './images/MockWiz-Logo (2).svg' %}" alt="MockWiz Logo"></a>
     </div>
   </header>
   <div class="tc-wrapper">
@@ -603,8 +594,11 @@
       <h4>Contacting MockWiz </h4>
       <p>If you have any questions about these Terms, please contact MockWiz at hello@Mockwiz.com
       </p>
+    </div>
 
-      <h4>Privacy Policy</h4>
+    <h3>Privacy Policy</h3>
+    <div class="tc-content">
+
       <p>MockWiz takes your privacy very seriously. We provide this Privacy Policy to inform you of our policies and
         procedures regarding the collection, use and disclosure of personal information we receive from users of
         Mockwiz.com (the “Site”) and our application for mobile devices (the “Application”). Unless otherwise defined in
@@ -921,8 +915,8 @@
       <p>If you’re working on a piece about MockWiz, please feel free to email us directly. We can provide background
         information about the company and availability for our team members regarding speaking opportunities.</p>
     </div>
-    <a href="index.html">Back to Home</a>
+    <a href="/">Back to Home</a>
   </div>
 </body>
 
-</html>
+{% endblock %}

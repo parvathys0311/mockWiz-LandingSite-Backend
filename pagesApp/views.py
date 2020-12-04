@@ -19,6 +19,7 @@ def index(request):
 
             createdExpertEmail = submittedForm['email'].value()
             createdExpert = Expert.objects.filter(email=createdExpertEmail)
+            
 
             # send confirmation email to expert on successful form submission
             name = createdExpert[0].firstName

@@ -30,7 +30,7 @@ def index(request):
                     f'Hi {name},\n\nThanks for your interest in MockWiz. We will contact you soon regarding the next steps.\n\nTo ensure you don’t miss out on any important messages, please add us to your contact list.\n\nRegards,\nMockWiz Team',
                     'hello@mockwiz.com',
                     [email],
-                    ['parvathys0311@gmail.com','robin@nicerr.org']
+                    ['hello@mockwiz.com']
                 )
                 email.send(fail_silently=False)
 

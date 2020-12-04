@@ -21,6 +21,10 @@ footer p {
     padding-bottom: 0.6em;
 }
 
+footer a{
+    color: #222222;
+}
+
 @media (orientation: landscape) {
   footer {
     position: relative;
@@ -42,6 +46,11 @@ footer p {
   .scrollable-content {
     /* min-height: 100vh; */
     position: relative;
+  }
+
+  footer a {
+  color: #00a19b;
+  /* text-size-adjust: none; */
   }
 }
 
